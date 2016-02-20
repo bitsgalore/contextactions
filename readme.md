@@ -13,6 +13,9 @@ This repo contains a collection of small utility scripts that define context men
     * qpdf - PDF check on file structure + encryption, linearization
     * gdalinfo - display metadata on varous geospatial formats
 
+* **imageanalysis**: various basic image analysis scripts, all using ImageMagick
+   * psnr - compare 2 images and report difference as PSNR value
+
 * **textconvert**: several conversions from / to Markdown, all using Pandoc.
 
 ## Installation
