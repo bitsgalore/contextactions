@@ -5,7 +5,7 @@
 # I/O stuff
 fileIn1=$1
 fileIn2=$2
-fileOut=/tmp/tmpresult.txt
+fileOut=/tmp/"$(cat /dev/urandom | tr -cd a-f0-9 | head -c 16)".txt
 
 # Viewer - default text editor (should work across most Linux flavors)
 viewer=xdg-open

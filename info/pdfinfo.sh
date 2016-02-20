@@ -5,7 +5,7 @@
 
 # I/O stuff
 fileIn=$1
-fileOut=/tmp/"$fileIn".xml
+fileOut=/tmp/"$(cat /dev/urandom | tr -cd a-f0-9 | head -c 16)".xml
 
 # Viewer - default text editor (should work across most Linux flavors)
 viewer=xdg-open
