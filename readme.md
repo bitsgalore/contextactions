@@ -11,6 +11,7 @@ This repo contains a collection of small utility scripts that define context men
     * pdfinfo - display metadata on PDF
     * pdftk - PDF (display general metadata, annotations)
     * qpdf - PDF check on file structure + encryption, linearization
+    * gdalinfo - display metadata on varous geospatial formats
 
 * **textconvert**: several conversions from / to Markdown, all using Pandoc.
 
