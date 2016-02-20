@@ -8,6 +8,8 @@ This repo contains a collection of small utility scripts that define context men
     * MediaInfo - lots of video and audio formats
     * Jpylyzer - Jpeg 2000
     * Epubcheck - Epub
+    * pdfinfo - PDF
+    * pdftk - PDF
 
 * **textconvert**: several conversions from / to Markdown, all using Pandoc.
 
