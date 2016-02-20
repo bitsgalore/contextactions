@@ -5,6 +5,7 @@ This repo contains a collection of small utility scripts that define context men
 * **info**: display technical information about a file. Currently included:
     * Unix File - display mime type
     * ExifTool - info on lots of (mostly graphics) formats
+    * MediaInfo - lots of video and audio formats
     * Jpylyzer - Jpeg 2000
     * Epubcheck - Epub
 
