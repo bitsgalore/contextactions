@@ -24,6 +24,12 @@ The results are displayed in the default text editor:
 
 ![](./exif-output.png)
 
+## Adding new scripts
+
+The easiest way is to copy one of the existing scripts and modify it to your needs. Note that scripts must be executable to work. You can do this with `chmod`, e.g.:
+
+    chmod a+x newscript.sh
+
 ## More information
 
 [Adding Right Click context actions to Caja](http://www.ethanjoachimeldridge.info/tech-blog/caja-exifstrip-context-action) (note: I couldn't make the example this post gives work; it seems that the `$CAJA_SCRIPT_SELECTED_FILE_PATHS` isn't recognised).
