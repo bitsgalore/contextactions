@@ -4,12 +4,13 @@ This repo contains a collection of small utility scripts that define context men
 
 * **info**: display technical information about a file. Currently included:
     * Unix File - display mime type
-    * ExifTool - info on lots of (mostly graphics) formats
-    * MediaInfo - lots of video and audio formats
-    * Jpylyzer - Jpeg 2000
-    * Epubcheck - Epub
-    * pdfinfo - PDF
-    * pdftk - PDF
+    * ExifTool - display metadata on lots of (mostly graphics) formats
+    * MediaInfo - display metadata on lots of video and audio formats
+    * Jpylyzer - validate JPEG 2000 Part 1 + display metadata
+    * Epubcheck - validate Epub + display metadata
+    * pdfinfo - display metadata on PDF
+    * pdftk - PDF (display general metadata, annotations)
+    * qpdf - PDF check on file structure + encryption, linearization
 
 * **textconvert**: several conversions from / to Markdown, all using Pandoc.
 
