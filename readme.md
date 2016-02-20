@@ -3,12 +3,12 @@
 This repo contains a collection of small utility scripts that define context menu actions in Caja. This is the default file manager of the [MATE](http://mate-desktop.com/) desktop, which is one of the desktop environments that are available for Linux Mint and Ubuntu. Scripts are organised into the following categories:
 
 * **info**: display technical information about a file. Currently included:
-    * Unix File (display mime type)
-    * ExifTool (lots of formats
-    * Jpylyzer (Jpeg 2000)
-    * Epubcheck (Epub)
+    * Unix File - display mime type
+    * ExifTool - info on lots of (mostly graphics) formats
+    * Jpylyzer - Jpeg 2000
+    * Epubcheck - Epub
 
-* **textconvert**: several conversions from / to Markdown, all using Pandoc
+* **textconvert**: several conversions from / to Markdown, all using Pandoc.
 
 ## Installation
 
