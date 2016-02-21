@@ -6,6 +6,7 @@ This repo contains a collection of small utility scripts that define context men
 
 * **info**: display technical information about a file. Currently included:
     * ExifTool - display metadata on lots of (mostly graphics) formats
+    * jhove - display metadata and validity for a number of formats
     * MediaInfo - display metadata on lots of video and audio formats
     * Jpylyzer - validate JPEG 2000 Part 1 + display metadata
     * Epubcheck - validate Epub + display metadata

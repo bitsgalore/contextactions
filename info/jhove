@@ -1,0 +1,12 @@
+#!/bin/bash
+
+# Analyze files with jhove
+
+title="jhove output"
+
+~/jhove-beta/jhove "$@" | zenity --text-info \
+	--title "$title" \
+	--width=640 \
+	--height=480
+exit 0
+
