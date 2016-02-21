@@ -30,7 +30,7 @@ First install [Zenity](https://wiki.gnome.org/action/show/Projects/Zenity) (if y
  
 If you're using the **Caja** file manager (MATE desktop), copy the scripts in this repo to `~/.config/caja/scripts/` or one of its subdirectories. If you're a **Nautilus** user, copy the scripts to `~/.local/share/nautilus/scripts/`.
 
-The tools that are called by the scripts must be installed separately.
+The tools that are called by the scripts must be installed separately. For tools that are installed in nomn-standard ways (e.g. jhove), you may need to update the script according to your local installation path. 
 
 ## Using the scripts
 
