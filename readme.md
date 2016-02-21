@@ -1,4 +1,4 @@
-## Contents of this repo
+## Right-click context actions for Caja and Nautilus
 
 This repo contains a collection of small utility scripts that define context menu actions that can be used in both the [Unity](https://unity.ubuntu.com/) and [MATE](http://mate-desktop.com/) desktop environments. On Unity they work with the Nautilus file manager, whereas on MATE they will work with Caja. Scripts are organised into the following categories:
 
@@ -46,6 +46,10 @@ The results are displayed in a text box:
 The easiest way is to copy one of the existing scripts and modify it to your needs. Note that scripts must be executable to work. You can do this with `chmod`, e.g.:
 
     chmod a+x newscript.sh
+
+## Disclaimer
+
+Use at your own risk! I've only tested the scripts with Caja on Linux Mint.
 
 ## More information
 
