@@ -1,0 +1,13 @@
+#!/bin/bash
+
+# Compare 2 images and return result as PSNR
+# Author: Johan van der Knijff (adapted from script by John Lehr)
+
+title="PSNR output"
+
+compare -metric PSNR "$1" "$2" null: 2>&1 | zenity --text-info \
+	--title "$title" \
+	--width=640 \
+	--height=480
+exit 0
+

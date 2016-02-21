@@ -1,0 +1,13 @@
+#!/bin/bash
+
+# Analyze files with exiftool
+# Author: Johan van der Knijff (adapted from script by John Lehr)
+
+title="exiftool output"
+
+exiftool -X "$@" | zenity --text-info \
+	--title "$title" \
+	--width=640 \
+	--height=480
+exit 0
+

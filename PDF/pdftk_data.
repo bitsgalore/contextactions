@@ -1,0 +1,13 @@
+#!/bin/bash
+
+# Extract metadata from pdf with pdftk
+# Author: Johan van der Knijff (adapted from script by John Lehr)
+
+title="pdftk output"
+
+pdftk "$1" dump_data | zenity --text-info \
+	--title "$title" \
+	--width=640 \
+	--height=480
+exit 0
+

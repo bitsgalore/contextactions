@@ -1,0 +1,13 @@
+#!/bin/bash
+
+# Analyze file with gdalinfo
+# Author: Johan van der Knijff (adapted from script by John Lehr)
+
+title="gdalinfo output"
+
+gdalinfo "$1" | zenity --text-info \
+	--title "$title" \
+	--width=640 \
+	--height=480
+exit 0
+

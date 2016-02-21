@@ -1,0 +1,13 @@
+#!/bin/bash
+
+# Establish Mimetype of a file with Apache Tika
+# Author: Johan van der Knijff (adapted from script by John Lehr)
+
+title="tika output"
+
+java -jar ~/tika/tika-app-1.12.jar -d "$1" | zenity --text-info \
+	--title "$title" \
+	--width=640 \
+	--height=480
+exit 0
+

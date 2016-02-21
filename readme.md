@@ -1,34 +1,41 @@
 ## Contents of this repo
 
-This repo contains a collection of small utility scripts that define context menu actions in Caja. This is the default file manager of the [MATE](http://mate-desktop.com/) desktop, which is one of the desktop environments that are available for Linux Mint and Ubuntu. Scripts are organised into the following categories:
+This repo contains a collection of small utility scripts that define context menu actions that can be used in both the [Unity](https://unity.ubuntu.com/) and [MATE](http://mate-desktop.com/) desktop environments. On Unity they work with the Nautilus file manager, whereas on MATE they will work with Caja. Scripts are organised into the following categories:
+
+* **identify**: format identification / magic detection using Unix File and Apache Tika.
 
 * **info**: display technical information about a file. Currently included:
-    * Unix File - display mime type
     * ExifTool - display metadata on lots of (mostly graphics) formats
     * MediaInfo - display metadata on lots of video and audio formats
     * Jpylyzer - validate JPEG 2000 Part 1 + display metadata
     * Epubcheck - validate Epub + display metadata
-    * pdfinfo - display metadata on PDF
-    * pdftk - PDF (display general metadata, annotations)
-    * qpdf - PDF check on file structure + encryption, linearization
     * gdalinfo - display metadata on varous geospatial formats
 
+* **PDF**: various PDF analysis operations:
+    * pdfinfo - display metadata
+    * pdftk - display general metadata, annotations
+    * qpdf - check on file structure + encryption, linearization
+
 * **imageanalysis**: various basic image analysis scripts, all using ImageMagick
-   * psnr - compare 2 images and report difference as PSNR value
+    * psnr - compare 2 images and report difference as PSNR value
 
 * **textconvert**: several conversions from / to Markdown, all using Pandoc.
 
 ## Installation
 
-Copy the scripts to `~/.config/caja/scripts` or one of its subdirectories.
+First install [Zenity](https://wiki.gnome.org/action/show/Projects/Zenity) (if you don't have it already):
+
+    sudo apt-get install zenity
+ 
+If you're using the **Caja** file manager (MATE desktop), copy the scripts in this repo to `~/.config/caja/scripts/` or one of its subdirectories. If you're a **Nautilus** user, copy the scripts to `~/.local/share/nautilus/scripts/`.
 
 ## Using the scripts
 
-In Caja, right-click on a file. Then select the *Scripts* item in the context menu, and navigate to the one you want to use. For example, to run ExifTool on an image file do this:
+In Caja (or Nautilus) right-click on a file. Then select the *Scripts* item in the context menu, and navigate to the one you want to use. For example, to run ExifTool on an image file do this:
 
 ![](./caja-context-example1.png)
 
-The results are displayed in the default text editor:
+The results are displayed in a text box:
 
 ![](./exif-output.png)
 
@@ -40,7 +47,7 @@ The easiest way is to copy one of the existing scripts and modify it to your nee
 
 ## More information
 
-[Adding Right Click context actions to Caja](http://www.ethanjoachimeldridge.info/tech-blog/caja-exifstrip-context-action) (note: I couldn't make the example this post gives work; it seems that the `$CAJA_SCRIPT_SELECTED_FILE_PATHS` isn't recognised).
+[Adding Right Click context actions to Caja](http://www.ethanjoachimeldridge.info/tech-blog/caja-exifstrip-context-action)
 
 ## Context menu actions for other desktops
 
@@ -49,4 +56,4 @@ The easiest way is to copy one of the existing scripts and modify it to your nee
 
 * Linux Mint Cinnamon with Nemo file manager:
 <http://www.pcsteps.com/4434-add-right-click-commands-linux-mint-ubuntu/>
-  
+ 

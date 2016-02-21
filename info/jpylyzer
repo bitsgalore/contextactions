@@ -1,0 +1,13 @@
+#!/bin/bash
+
+# Analyze files with jpylyzer
+# Author: Johan van der Knijff (adapted from script by John Lehr)
+
+title="jpylyzer output"
+
+jpylyzer "$@" | zenity --text-info \
+	--title "$title" \
+	--width=640 \
+	--height=480
+exit 0
+

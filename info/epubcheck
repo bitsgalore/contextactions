@@ -1,0 +1,13 @@
+#!/bin/bash
+
+# Analyze file with epubcheck (requires epubcheck 4.01 or more recent)
+# Author: Johan van der Knijff (adapted from script by John Lehr)
+
+title="epubcheck output"
+
+epubcheck "$1" -json - | zenity --text-info \
+	--title "$title" \
+	--width=640 \
+	--height=480
+exit 0
+

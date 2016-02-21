@@ -1,0 +1,15 @@
+#!/bin/bash
+
+# Check pdf with qpdf
+# Author: Johan van der Knijff (adapted from script by John Lehr)
+
+title="qpdf output"
+
+qpdf "$1" --check | zenity --text-info \
+	--title "$title" \
+	--width=640 \
+	--height=480
+exit 0
+
+ 
+

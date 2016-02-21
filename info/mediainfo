@@ -1,0 +1,13 @@
+#!/bin/bash
+
+# Analyze files with mediainfo
+
+title="mediainfo output"
+
+# mediainfo --f --output=XML "$@" | zenity --text-info \
+mediainfo --f "$@" | zenity --text-info \
+	--title "$title" \
+	--width=640 \
+	--height=480
+exit 0
+
