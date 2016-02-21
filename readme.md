@@ -29,6 +29,8 @@ First install [Zenity](https://wiki.gnome.org/action/show/Projects/Zenity) (if y
  
 If you're using the **Caja** file manager (MATE desktop), copy the scripts in this repo to `~/.config/caja/scripts/` or one of its subdirectories. If you're a **Nautilus** user, copy the scripts to `~/.local/share/nautilus/scripts/`.
 
+The tools that are called by the scripts must be installed separately.
+
 ## Using the scripts
 
 In Caja (or Nautilus) right-click on a file. Then select the *Scripts* item in the context menu, and navigate to the one you want to use. For example, to run ExifTool on an image file do this:
@@ -47,13 +49,7 @@ The easiest way is to copy one of the existing scripts and modify it to your nee
 
 ## More information
 
-[Adding Right Click context actions to Caja](http://www.ethanjoachimeldridge.info/tech-blog/caja-exifstrip-context-action)
+* [Adding Right Click context actions to Caja](http://www.ethanjoachimeldridge.info/tech-blog/caja-exifstrip-context-action)
 
-## Context menu actions for other desktops
-
-* Ubuntu with Nautilus file manager - Nautilus Actions:
-<http://www.pcsteps.com/4434-add-right-click-commands-linux-mint-ubuntu/>
-
-* Linux Mint Cinnamon with Nemo file manager:
-<http://www.pcsteps.com/4434-add-right-click-commands-linux-mint-ubuntu/>
+* [Add Right-Click Commands in Linux Mint / Ubuntu](http://www.pcsteps.com/4434-add-right-click-commands-linux-mint-ubuntu/)
  
