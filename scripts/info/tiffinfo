@@ -1,0 +1,13 @@
+#!/bin/bash
+
+# Display information  about TIFF file with tiffinfo
+# Author: Johan van der Knijff (adapted from script by John Lehr)
+
+title="tiffinfo output"
+
+tiffinfo -D "$@" | zenity --text-info \
+	--title "$title" \
+	--width=640 \
+	--height=480
+exit 0
+

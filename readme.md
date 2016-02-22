@@ -18,6 +18,9 @@ Scripts are organised into the following categories:
     * MediaInfo - display metadata on lots of video and audio formats
     * Jpylyzer - validate JPEG 2000 Part 1 + display metadata
     * Epubcheck - validate Epub + display metadata
+    * pngcheck - check integrity of PNG, JNG and MNG files
+    * tiffinfo - display information  about TIFF file (includes some error checking as well)
+    * jpeginfo - check integrity of JPEG file and display some information 
     * gdalinfo - display metadata on varous geospatial formats
 
 * **PDF**: various PDF analysis operations:

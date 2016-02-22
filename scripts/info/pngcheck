@@ -1,0 +1,13 @@
+#!/bin/bash
+
+# Check integrity of PNG, JNG and MNG files pngcheck
+# Author: Johan van der Knijff (adapted from script by John Lehr)
+
+title="pngcheck output"
+
+tiffinfo "$@" | zenity --text-info \
+	--title "$title" \
+	--width=640 \
+	--height=480
+exit 0
+

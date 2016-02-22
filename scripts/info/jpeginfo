@@ -1,0 +1,13 @@
+#!/bin/bash
+
+# Check integrity of JPEG file and display some information with jpeginfo
+# Author: Johan van der Knijff (adapted from script by John Lehr)
+
+title="jpeginfo output"
+
+jpeginfo -c -i "$@" | zenity --text-info \
+	--title "$title" \
+	--width=640 \
+	--height=480
+exit 0
+
