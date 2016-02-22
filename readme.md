@@ -1,6 +1,14 @@
 ## Right-click context actions for Caja and Nautilus
 
-This repo contains a collection of small utility scripts that define context menu actions that can be used in both the [Unity](https://unity.ubuntu.com/) and [MATE](http://mate-desktop.com/) desktop environments. On Unity they work with the Nautilus file manager, whereas on MATE they will work with Caja. Scripts are organised into the following categories:
+This repo contains a collection of utility scripts that define context menu actions. These allow you to run a number of command-line tools by right-clicking on a file. Output is displayed in a pop-up text box. I originally got the idea for this from [BitCurator](http://wiki.bitcurator.net/index.php?title=Using_Nautilus_for_Data_Triage), which uses Nautilus scripts for various data triage operations. Most of the scripts in this repo are based on the BitCurator scripts (but extended for additional tools).
+
+## Target environments
+
+The scripts can be used in both the [Unity](https://unity.ubuntu.com/) and [MATE](http://mate-desktop.com/) desktop environments. On Unity (default Ubuntu desktop) you can use them in the Nautilus file manager, whereas on MATE they will work with Caja. 
+
+## Script categories
+
+Scripts are organised into the following categories:
 
 * **identify**: format identification / magic detection using Unix File and Apache Tika.
 
@@ -27,10 +35,14 @@ This repo contains a collection of small utility scripts that define context men
 First install [Zenity](https://wiki.gnome.org/action/show/Projects/Zenity) (if you don't have it already):
 
     sudo apt-get install zenity
+
+**Nautilus** users may also need to install *nautilus-actions* (I don't use Nautilus myself so I don't know if this is necessary):
+
+    sudo apt-get install nautilus-actions
  
 If you're using the **Caja** file manager (MATE desktop), copy the scripts in this repo to `~/.config/caja/scripts/` or one of its subdirectories. If you're a **Nautilus** user, copy the scripts to `~/.local/share/nautilus/scripts/`.
 
-The tools that are called by the scripts must be installed separately. For tools that are installed in nomn-standard ways (e.g. jhove), you may need to update the script according to your local installation path. 
+All tools that are called by the scripts must be installed separately (if you don't have them already). For tools that are installed in nomn-standard ways (e.g. jhove, Apache Tika) you may need to update the script according to your local installation path. 
 
 ## Using the scripts
 
