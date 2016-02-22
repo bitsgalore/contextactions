@@ -1,6 +1,6 @@
 ## Right-click context actions for Caja and Nautilus
 
-This repo contains a collection of utility scripts that define context menu actions. These allow you to run a number of command-line tools by right-clicking on a file. Output is displayed in a pop-up text box. I originally got the idea for this from [BitCurator](http://wiki.bitcurator.net/index.php?title=Using_Nautilus_for_Data_Triage), which uses Nautilus scripts for various data triage operations. Most of the scripts in this repo are based on the BitCurator scripts (but extended for additional tools).
+This repo contains a collection of utility scripts that define context menu actions. These allow you to run a number of command-line tools by right-clicking on a file. Output is displayed in a pop-up text box. I originally got the idea for this from [BitCurator](http://wiki.bitcurator.net/index.php?title=Using_Nautilus_for_Data_Triage), which uses Nautilus scripts for various data triage operations. Most of the scripts in this repo are based on the BitCurator scripts (but extended for additional tools). This collection of scripts will probably expand over time.
 
 ## Target environments
 
