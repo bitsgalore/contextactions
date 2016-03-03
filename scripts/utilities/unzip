@@ -1,0 +1,12 @@
+#!/bin/sh
+
+# Unzip contents of file to folder
+
+fileIn=$1
+
+# Get name of file without extension
+fileName=$(basename "$fileIn")
+fileName="${fileName%.*}"
+
+unzip "$fileIn" -d "$fileName"
+
