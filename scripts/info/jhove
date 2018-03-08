@@ -4,7 +4,7 @@
 
 title="jhove output"
 
-~/jhove-beta/jhove "$@" | zenity --text-info \
+jhove "$1" | zenity --text-info \
 	--title "$title" \
 	--width=640 \
 	--height=480

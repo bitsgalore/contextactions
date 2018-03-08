@@ -1,11 +1,11 @@
 #!/bin/bash
 
-# Establish Mimetype of a file with Apache Tika
+# Extract text from file with Apache Tika
 # Author: Johan van der Knijff (adapted from script by John Lehr)
 
 title="tika output"
 
-tika -d "$1" | zenity --text-info \
+tika --text "$1" | zenity --text-info \
 	--title "$title" \
 	--width=640 \
 	--height=480

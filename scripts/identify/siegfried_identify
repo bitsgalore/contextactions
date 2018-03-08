@@ -1,0 +1,15 @@
+#!/bin/bash
+#: Title		: Siegfried Identify
+#: Date			: 2010-05-11
+#: Author		: "John Lehr" <slo.sleuth@gmail.com>
+#: Version		: 1.0
+#: Description	: Identify file with Siegfried 
+
+sf "$@" | zenity --text-info \
+	--title "Siegfried identification" \
+	--width=640 \
+	--height=480
+
+exit 0
+ 
+
