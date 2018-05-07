@@ -5,4 +5,4 @@
 fileIn=$1
 fileOut=$fileIn.wiki
 
-pandoc -s -S --ascii -t mediawiki "$fileIn" -o "$fileOut"
+pandoc -f markdown_phpextra -t mediawiki "$fileIn" -o "$fileOut"

@@ -5,4 +5,4 @@
 fileIn=$1
 fileOut=$fileIn.docx
 
-pandoc -s -S --ascii -N --toc-depth=2 "$fileIn" -o "$fileOut"
+pandoc -f markdown_phpextra "$fileIn" -o "$fileOut"

@@ -5,4 +5,4 @@
 fileIn=$1
 fileOut=$fileIn.html
 
-pandoc -s -S --ascii -t html5 "$fileIn" -o "$fileOut"
+pandoc -f markdown_phpextra -t html5 "$fileIn" -o "$fileOut"
