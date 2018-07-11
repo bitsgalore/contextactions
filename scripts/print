@@ -1,0 +1,6 @@
+# allows the printing of multiple selected files by way of libreoffice's backend
+# requires libreoffice, default printer installed
+for file in "$@"
+do
+    libreoffice -p "$(echo "$file")"
+done
