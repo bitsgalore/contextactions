@@ -1,0 +1,6 @@
+#!/bin/bash
+
+for file in "$@"
+do
+  pdftotext -layout $file
+done
