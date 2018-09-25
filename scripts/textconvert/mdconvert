@@ -7,25 +7,16 @@ fileIn="$1"
 # Get script location
 scriptDir="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 
-# Select input format
-fmtIn=$(zenity --height=250 --list --radiolist \
-   --title="Select input format" --column=Boxes --column=Selections \
-   TRUE markdown FALSE markdown_phpextra --separator=':')
+userInput=$(yad --width=400 --title="Convert from Markdown" --text="Settings:" \
+--form \
+--field="Input format":CB \
+'markdown!markdown_phpextra' \
+--field="Output format":CB \
+'docx!odt!html5!mediawiki')
 
-if [ -z "$fmtIn" ] ; then
-   echo "No selection"
-   exit 1
-fi
-
-# Select output format
-fmtOut=$(zenity --height=250 --list --radiolist \
-   --title="Select output format" --column=Boxes --column=Selections \
-   TRUE docx FALSE odt FALSE html5 FALSE mediawiki --separator=':')
-
-if [ -z "$fmtOut" ] ; then
-   echo "No selection"
-   exit 1
-fi
+# Parse yad output into variables
+fmtIn="$(cut -d'|' -f1 <<<$userInput)"
+fmtOut="$(cut -d'|' -f2 <<<$userInput)"
 
 # Set output file extension
 case $fmtOut in
@@ -53,4 +44,3 @@ elif [ "$fmtOut" == "odt" ] ; then
 else
     pandoc -f $fmtIn -s "$fileIn" -t $fmtOut -o "$fileOut"
 fi
-
