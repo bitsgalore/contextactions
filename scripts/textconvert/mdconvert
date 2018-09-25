@@ -45,10 +45,10 @@ fileOut=$bName.$extensionOut
 
 if [ "$fmtOut" == "docx" ] ; then
     # Template MS Word file (in same dir as script)
-    referenceDoc=$scriptDir/reference.docx
+    referenceDoc=$scriptDir/.templates/reference.docx
     pandoc --reference-doc $referenceDoc -f $fmtIn -s "$fileIn" -t $fmtOut -o "$fileOut"
 elif [ "$fmtOut" == "odt" ] ; then
-    referenceDoc=$scriptDir/reference.odt
+    referenceDoc=$scriptDir/.templates/reference.odt
     pandoc --reference-doc $referenceDoc -f $fmtIn -s "$fileIn" -t $fmtOut -o "$fileOut"
 else
     pandoc -f $fmtIn -s "$fileIn" -t $fmtOut -o "$fileOut"
