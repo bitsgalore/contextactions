@@ -5,7 +5,7 @@
 
 title="qpdf output"
 
-qpdf "$1" --check | zenity --text-info \
+qpdf "$1" --check | yad --text-info \
 	--title "$title" \
 	--width=640 \
 	--height=480

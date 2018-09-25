@@ -5,7 +5,7 @@
 
 title="tika output"
 
-tika --text "$1" | zenity --text-info \
+tika --text "$1" | yad --text-info \
 	--title "$title" \
 	--width=640 \
 	--height=480

@@ -5,7 +5,7 @@
 
 title="gdalinfo output"
 
-gdalinfo "$1" | zenity --text-info \
+gdalinfo "$1" | yad --text-info \
 	--title "$title" \
 	--width=640 \
 	--height=480

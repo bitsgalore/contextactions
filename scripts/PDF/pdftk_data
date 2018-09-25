@@ -5,7 +5,7 @@
 
 title="pdftk output"
 
-pdftk "$1" dump_data | zenity --text-info \
+pdftk "$1" dump_data | yad --text-info \
 	--title "$title" \
 	--width=640 \
 	--height=480

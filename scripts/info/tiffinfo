@@ -5,7 +5,7 @@
 
 title="tiffinfo output"
 
-tiffinfo -D "$@" | zenity --text-info \
+tiffinfo -D "$@" | yad --text-info \
 	--title "$title" \
 	--width=640 \
 	--height=480

@@ -5,7 +5,7 @@
 
 title="jpeginfo output"
 
-jpeginfo -c -i "$@" | zenity --text-info \
+jpeginfo -c -i "$@" | yad --text-info \
 	--title "$title" \
 	--width=640 \
 	--height=480

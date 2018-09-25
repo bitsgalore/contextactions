@@ -5,7 +5,7 @@
 
 title="PSNR output"
 
-compare -metric PSNR "$1" "$2" null: 2>&1 | zenity --text-info \
+compare -metric PSNR "$1" "$2" null: 2>&1 | yad --text-info \
 	--title "$title" \
 	--width=640 \
 	--height=480

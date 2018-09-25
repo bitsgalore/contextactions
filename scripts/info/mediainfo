@@ -4,8 +4,8 @@
 
 title="mediainfo output"
 
-# mediainfo --f --output=XML "$@" | zenity --text-info \
-mediainfo --f "$@" | zenity --text-info \
+# mediainfo --f --output=XML "$@" | yad --text-info \
+mediainfo --f "$@" | yad --text-info \
 	--title "$title" \
 	--width=640 \
 	--height=480

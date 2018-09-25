@@ -5,7 +5,7 @@
 #: Version		: 1.0
 #: Description	: Display file mime type
 
-file -i "$@" | zenity --text-info \
+file -i "$@" | yad --text-info \
 	--title "Show File Type" \
 	--width=640 \
 	--height=480

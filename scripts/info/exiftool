@@ -5,7 +5,7 @@
 
 title="exiftool output"
 
-exiftool -X "$@" | zenity --text-info \
+exiftool -X "$@" | yad --text-info \
 	--title "$title" \
 	--width=640 \
 	--height=480

@@ -5,7 +5,7 @@
 #: Version		: 1.0
 #: Description	: Identify file with Siegfried 
 
-sf "$@" | zenity --text-info \
+sf "$@" | yad --text-info \
 	--title "Siegfried identification" \
 	--width=640 \
 	--height=480
