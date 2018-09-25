@@ -1,8 +1,14 @@
-#!/bin/sh
+#!/bin/bash
 
 # Convert Markdown file to user-defined output format using pandoc
 
 fileIn="$1"
+
+# Get script location
+scriptDir="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
+
+# Template MS Word file (in same dir as script)
+referenceDoc=$scriptDir/reference.docx
 
 # Select input format
 fmtIn=$(zenity --height=250 --list --radiolist \
@@ -26,7 +32,7 @@ fi
 
 # Set output file extension
 case $fmtOut in
-    docx) extensionOut=docx ;;
+    docx) extensionOut="docx" ;;
     odt) extensionOut=odt ;;
     html5) extensionOut=html ;;
     mediawiki) extensionOut=wiki ;;
@@ -38,5 +44,11 @@ bName=$(basename "$fileIn" | cut -f 1 -d '.')
 # Output file name
 fileOut=$bName.$extensionOut
 
-# Convert with Pandoc
-pandoc -f $fmtIn -s "$fileIn" -t $fmtOut -o "$fileOut"
+# Convert with Pandoc. Use --reference-doc (template) option if input format is docx
+
+if [ "$fmtOut" == "docx" ] ; then
+    pandoc --reference-doc $referenceDoc -f $fmtIn -s "$fileIn" -t $fmtOut -o "$fileOut"
+else
+    pandoc -f $fmtIn -s "$fileIn" -t $fmtOut -o "$fileOut"
+fi
+
