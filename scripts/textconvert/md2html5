@@ -1,8 +1,0 @@
-#!/bin/sh
-
-# Convert Markdown file to html5 using pandoc
-
-fileIn=$1
-fileOut=$fileIn.html
-
-pandoc -f markdown_phpextra -t html5 "$fileIn" -o "$fileOut"

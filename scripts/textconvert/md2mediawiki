@@ -1,8 +1,0 @@
-#!/bin/sh
-
-# Convert Markdown file to MediaWiki using pandoc
-
-fileIn=$1
-fileOut=$fileIn.wiki
-
-pandoc -f markdown_phpextra -t mediawiki "$fileIn" -o "$fileOut"

@@ -1,8 +1,0 @@
-#!/bin/sh
-
-# Convert Markdown file to docx using pandoc
-
-fileIn=$1
-fileOut=$fileIn.docx
-
-pandoc -f markdown_phpextra "$fileIn" -o "$fileOut"

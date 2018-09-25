@@ -1,8 +1,0 @@
-#!/bin/sh
-
-# Convert Markdown file to odt using pandoc
-
-fileIn=$1
-fileOut=$fileIn.odt
-
-pandoc -f markdown_phpextra "$fileIn" -o "$fileOut"

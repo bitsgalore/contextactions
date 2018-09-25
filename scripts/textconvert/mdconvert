@@ -1,0 +1,42 @@
+#!/bin/sh
+
+# Convert Markdown file to user-defined output format using pandoc
+
+fileIn="$1"
+
+# Select input format
+fmtIn=$(zenity --height=250 --list --radiolist \
+   --title="Select input format" --column=Boxes --column=Selections \
+   TRUE markdown FALSE markdown_phpextra --separator=':')
+
+if [ -z "$fmtIn" ] ; then
+   echo "No selection"
+   exit 1
+fi
+
+# Select output format
+fmtOut=$(zenity --height=250 --list --radiolist \
+   --title="Select output format" --column=Boxes --column=Selections \
+   TRUE docx FALSE odt FALSE html5 FALSE mediawiki --separator=':')
+
+if [ -z "$fmtOut" ] ; then
+   echo "No selection"
+   exit 1
+fi
+
+# Set output file extension
+case $fmtOut in
+    docx) extensionOut=docx ;;
+    odt) extensionOut=odt ;;
+    html5) extensionOut=html ;;
+    mediawiki) extensionOut=wiki ;;
+esac
+
+# Input file basename, extension removed
+bName=$(basename "$fileIn" | cut -f 1 -d '.')
+
+# Output file name
+fileOut=$bName.$extensionOut
+
+# Convert with Pandoc
+pandoc -f $fmtIn "$fileIn" -t $fmtOut -o "$fileOut"
