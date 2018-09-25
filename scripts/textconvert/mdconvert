@@ -7,9 +7,6 @@ fileIn="$1"
 # Get script location
 scriptDir="$( cd "$( dirname "${BASH_SOURCE[0]}" )" && pwd )"
 
-# Template MS Word file (in same dir as script)
-referenceDoc=$scriptDir/reference.docx
-
 # Select input format
 fmtIn=$(zenity --height=250 --list --radiolist \
    --title="Select input format" --column=Boxes --column=Selections \
@@ -47,6 +44,11 @@ fileOut=$bName.$extensionOut
 # Convert with Pandoc. Use --reference-doc (template) option if input format is docx
 
 if [ "$fmtOut" == "docx" ] ; then
+    # Template MS Word file (in same dir as script)
+    referenceDoc=$scriptDir/reference.docx
+    pandoc --reference-doc $referenceDoc -f $fmtIn -s "$fileIn" -t $fmtOut -o "$fileOut"
+elif [ "$fmtOut" == "odt" ] ; then
+    referenceDoc=$scriptDir/reference.odt
     pandoc --reference-doc $referenceDoc -f $fmtIn -s "$fileIn" -t $fmtOut -o "$fileOut"
 else
     pandoc -f $fmtIn -s "$fileIn" -t $fmtOut -o "$fileOut"
