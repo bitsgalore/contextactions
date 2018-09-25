@@ -39,4 +39,4 @@ bName=$(basename "$fileIn" | cut -f 1 -d '.')
 fileOut=$bName.$extensionOut
 
 # Convert with Pandoc
-pandoc -f $fmtIn "$fileIn" -t $fmtOut -o "$fileOut"
+pandoc -f $fmtIn -s "$fileIn" -t $fmtOut -o "$fileOut"
