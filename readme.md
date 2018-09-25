@@ -35,9 +35,9 @@ Scripts are organised into the following categories:
 
 ## Installation
 
-First install [Zenity](https://wiki.gnome.org/action/show/Projects/Zenity) (if you don't have it already):
+First install [Yad](https://sourceforge.net/projects/yad-dialog/) (if you don't have it already):
 
-    sudo apt-get install zenity
+    sudo apt-get install yad
 
 **Nautilus** users may also need to install *nautilus-actions* (I don't use Nautilus myself so I don't know if this is necessary):
 
