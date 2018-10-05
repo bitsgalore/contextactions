@@ -1,0 +1,12 @@
+#!/bin/bash
+
+# uses libreoffice to convert documents to PDF
+
+function convert {
+  libreoffice --convert-to pdf "$(echo "$file")" 
+}
+
+for file in "$@"
+do
+  convert
+done

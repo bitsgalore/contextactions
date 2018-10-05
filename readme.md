@@ -27,6 +27,7 @@ Scripts are organised into the following categories:
     * pdfinfo - display metadata
     * pdftk - display general metadata, annotations
     * qpdf - check on file structure + encryption, linearization
+    * poppler-utils - various conversion tools
 
 * **imageanalysis**: various basic image analysis scripts, all using ImageMagick
     * psnr - compare 2 images and report difference as PSNR value
